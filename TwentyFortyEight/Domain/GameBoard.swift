@@ -44,11 +44,10 @@ struct GameBoard {
             }
         }
         
-        guard emptyTiles != [] else {
+         guard emptyTiles != [] else {
             return
         }
         
-        //if there are no empty tiles, do nothing and return
         //Using the index found, pick a random empty index and fill it with value (2 for 90% and 4 for 10%
         // 1. Get a random INDEX from the array of empty tiles.
         //    For example, if there are 5 empty tiles, this will be a number from 0 to 4.

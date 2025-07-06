@@ -10,6 +10,13 @@ import SwiftUI
 
 class GameViewModel: ObservableObject {
     @Published var gameBoard = GameBoard(size: 4)
+    @Published var highScore = 0
+    
+    private let repository = GameRepository()
+    
+    init() {
+        self.highScore = repository.loadHighScore()
+    }
     
     var isGameOver: Bool {
         return gameBoard.isGameOver
@@ -32,6 +39,10 @@ class GameViewModel: ObservableObject {
     func move(_ direction: MoveDirection){
         withAnimation {
             gameBoard.move(direction)
+            if gameBoard.score > highScore {
+                highScore = gameBoard.score
+                repository.save(highScore: highScore)
+            }
         }
     }
 }

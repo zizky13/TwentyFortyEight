@@ -15,12 +15,21 @@ struct GameView: View {
 
     var body: some View {
         VStack(spacing: TILE_SPACING) {
+
             Text("2048")
                 .font(.largeTitle)
                 .fontWeight(.bold)
+            HStack {
+                
+                ScoreView(title: "Score", score: viewModel.gameBoard.score)
+                ScoreView(title: "Best", score: viewModel.highScore)
+                Spacer()
+                Button("New Game", action: viewModel.newGame)
+                    .buttonStyle(.borderedProminent)
 
-            Button("New Game", action: viewModel.newGame)
-                .buttonStyle(.borderedProminent)
+                
+            }
+            .padding(.vertical, 10)
 
             // The Game Board area
             GeometryReader { geometry in
