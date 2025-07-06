@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TileView: View {
     let tile: Tile
-    
+
     var body: some View {
         Text("\(tile.value)")
             .font(.title)
@@ -19,7 +19,7 @@ struct TileView: View {
             .background(backgroundColor)
             .cornerRadius(8)
     }
-    
+
     private var backgroundColor: Color {
         switch tile.value {
         case 2:
@@ -34,8 +34,16 @@ struct TileView: View {
             return .purple
         case 64:
             return .yellow
+        case 128:
+            return .pink
+        case 256:
+            return .brown
+        case 512:
+            return .black
+        case 1024:
+            return .white
         default:
-            return .gray
+            return .indigo
         }
     }
 }
