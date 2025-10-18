@@ -83,32 +83,9 @@ TwentyFortyEightUITests/
 - Add undo, haptics, or animations when merging
 - Support variable board sizes (e.g., 5x5)
 - Add more unit tests around merge/move edge cases
-
----
-
-Built for learning and fun. Enjoy merging!
  
-## Screenshots
+## Screenshot
+<img width="1179" height="2556" alt="screenshot-merge" src="https://github.com/user-attachments/assets/f42d3918-0ff8-42a7-9b4b-3f8c9b307d82" />
+<img width="1179" height="2556" alt="screenshot-gameover" src="https://github.com/user-attachments/assets/da74cfab-f410-457b-af96-bf2315885f12" />
+<img width="1179" height="2556" alt="screenshot-start" src="https://github.com/user-attachments/assets/f7e25c02-e356-4856-83ed-b33743435814" />
 
-Add your screenshots to `docs/` and they will render here. Suggested names:
-
-![Start Board](docs/screenshot-start.png)
-![Merge In Action](docs/screenshot-merge.png)
-![Game Over](docs/screenshot-gameover.png)
-
-Tips:
-- Use iOS Simulator or a device for captures
-- Prefer consistent device size (e.g., iPhone 15)
-- Use light background around the board for clarity
-
-## Demo GIF
-
-Place a short gameplay GIF at `docs/demo.gif` and it will display below:
-
-![2048 Demo](docs/demo.gif)
-
-How to record a GIF (macOS):
-- Record: Shift+Cmd+5 → Record Selected Portion (or QuickTime → New Screen Recording)
-- Convert to GIF (requires ffmpeg):
-  - `ffmpeg -i screenrecord.mov -vf "fps=30,scale=750:-1:flags=lanczos" -loop 0 docs/demo.gif`
-- Move files into `docs/` and commit
